@@ -1,0 +1,101 @@
+header{
+    background-color: #bbbbbb;
+    padding: 20px 0;
+}
+
+.caja{ /*con un punto referenciamos a una clase*/
+    width: 940px; /*le damos el ancho total al div padre de nuestro nav-bar e imagen*/
+    position: relative;
+    margin: 0 auto;/* usamos el margin automático para que siempre quede centrado dependiendo de la pantalla del user*/
+}
+
+nav{
+    position: absolute;/*posición absoluta para poder ubicar correctamente nuestro nav bar a nuestro gusto*/
+    top: 85px;
+    right: 25px;
+}
+
+nav li{
+    display: inline;/* display inline nos permite tener la lista en una sola línea y no una abajo de otra*/
+    margin: 0 0 0 20px;
+}
+
+nav a{/*modificamos el texto que vive en la etiqueta <a> de nuestro <nav>*/
+    text-transform: uppercase; /*convertimos el texto a mayus*/
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-decoration: none;/*quitamos el subrayado automático que tienen los links*/
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px; /*defino el ancho total del contenedor padre de la lista*/
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block; /*hacemos que los elementos de la lista se comporten como bloques en linea*/
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%; /*con margin le damos espacio desde afuera entre cada elemento*/
+    padding: 30px 20px; /*con padding espaciamos hacia adentro de los elementos*/
+    box-sizing: border-box; /*con esto definimos que los bordes de los elementos serán los límites de espacio definido*/
+    /*
+        border-color: #000000;
+        border-width: 2px;
+        border-style: solid;
+        podemos resumir estas propiedades de border en una sola línea
+    */
+    border: 2px solid #000000; /*prestar atención al orden de los parámetros*/
+    border-radius: 20px; /*redondeado de esquinas*/
+}
+
+.productos li:hover{
+    border-color: #c78c19;
+}
+
+.productos li:active{
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.productos li:hover h2{
+    font-size: 2.2vw;
+}
+
+.prod-descripcion{
+    font-size: 1.5vw;
+}
+
+.prod-precio{
+    font-size: 2vw;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.productos li:hover .prod-precio{
+    font-size: 2.2vw;
+}
+
+footer{
+    text-align: center;
+    background: url(img/bg.jpg);
+    padding: 20px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 1vw;
+    margin: 20px;
+}
