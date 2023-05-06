@@ -1,0 +1,48 @@
+.titulo-principal{/*con un punto referenciamos a una clase*/
+    padding-left: 30px;
+}
+
+#banner{/*con # referenciamos a un ID*/
+    width: 100%;
+}
+
+.principal{
+    background-color: #cccccc;
+    padding: 20px;
+}
+
+.titulo-centralizado{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+em strong{
+    color: red;
+}
+
+#mision{
+    font-size: 20px;
+}
+
+.diferenciales{
+    background-color: white;
+    padding: 30px;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.items{
+    font-style: italic;
+}
+
+.img-diferenciales{
+    width: 50%;
+}

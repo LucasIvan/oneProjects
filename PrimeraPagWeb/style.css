@@ -1,48 +1,274 @@
-.titulo-principal{/*con un punto referenciamos a una clase*/
-    padding-left: 30px;
+body{
+    font-family: 'Montserrat', sans-serif;
 }
 
-#banner{/*con # referenciamos a un ID*/
+header{
+    background-color: #bbbbbb;
+    padding: 20px 0;
+}
+
+.caja{ /*con un punto referenciamos a una clase*/
+    width: 940px; /*le damos el ancho total al div padre de nuestro nav-bar e imagen*/
+    position: relative;
+    margin: 0 auto;/* usamos el margin automático para que siempre quede centrado dependiendo de la pantalla del user*/
+}
+
+nav{
+    position: absolute;/*posición absoluta para poder ubicar correctamente nuestro nav bar a nuestro gusto*/
+    top: 85px;
+    right: 25px;
+}
+
+nav li{
+    display: inline;/* display inline nos permite tener la lista en una sola línea y no una abajo de otra*/
+    margin: 0 0 0 20px;
+}
+
+nav a{/*modificamos el texto que vive en la etiqueta <a> de nuestro <nav>*/
+    text-transform: uppercase; /*convertimos el texto a mayus*/
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-decoration: none;/*quitamos el subrayado automático que tienen los links*/
+}
+
+nav a:hover{/*el hover nos sirve para realizar cambios al posicionar el mouse sobre el elemento*/
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px; /*defino el ancho total del contenedor padre de la lista*/
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block; /*hacemos que los elementos de la lista se comporten como bloques en linea*/
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%; /*con margin le damos espacio desde afuera entre cada elemento*/
+    padding: 30px 20px; /*con padding espaciamos hacia adentro de los elementos*/
+    box-sizing: border-box; /*con esto definimos que los bordes de los elementos serán los límites de espacio definido*/
+    /*
+        border-color: #000000;
+        border-width: 2px;
+        border-style: solid;
+        podemos resumir estas propiedades de border en una sola línea
+    */
+    border: 2px solid #000000; /*prestar atención al orden de los parámetros*/
+    border-radius: 20px; /*redondeado de esquinas*/
+}
+
+.productos li:hover{
+    border-color: #c78c19;
+}
+
+.productos li:active{/*el active indica cuando se hace click en el elemento*/
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.productos li:hover h2{
+    font-size: 2.2vw;
+}
+
+.prod-descripcion{
+    font-size: 1.5vw;
+}
+
+.prod-precio{
+    font-size: 2vw;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.productos li:hover .prod-precio{
+    font-size: 2.2vw;
+}
+
+footer{
+    text-align: center;
+    background: url(img/bg.jpg);/*usamos una imagen como fondo de un elemento, se auto rellena repitiendo las veces q sea necesario*/
+    padding: 20px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 1vw;
+    margin: 20px;
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 1.5vw;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 1vw;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    border: none;/*quitamos los bordes*/
+    border-radius: 5px;/*redondeamos las esquinas*/
+    /*transition: 1s background;/*definimos el tiempo que tardará en transicionar la propiedad background*/
+    transition: 1s all;/*al declarar con "all" se aplicará el tiempo de transición a todas las propiedades*/
+    cursor: pointer;/*propiedad para cambiar el puntero del mouse al estar sobre el elemento*/
+}
+
+.enviar:hover{
+    background-color: darkorange;
+    transform: scale(1.025);/*propiedad que facilita la transformación de todas las propiedades de una sola vez*/
+    
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background-color: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/* ACÁ INICIA EL CSS PARA EL HOME/INDEX */
+
+.banner{
     width: 100%;
 }
 
 .principal{
-    background-color: #cccccc;
-    padding: 20px;
+    padding: 3em 0;
+    background-color: #fefefe;
+    width: 940px;
+    margin: 0 auto;
 }
 
-.titulo-centralizado{
+.titulo-principal{
     text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;/*limpia cualquier modificación que pueda hacer la propiedad float*/
 }
 
-p{
-    text-align: center;
+.principal p{
+    margin: 0 0 1em;
 }
 
-em strong{
-    color: red;
+.principal strong{
+    font-weight: bold;
 }
 
-#mision{
-    font-size: 20px;
-}
-
-.diferenciales{
-    background-color: white;
-    padding: 30px;
-}
-
-ul{
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
-}
-
-.items{
+.principal em{
     font-style: italic;
 }
 
+.utensillos{
+    width: 120px;
+    float: left;/*la propiedad float permite que el elemento pueda rodearse automáticamente por demás contenido*/
+    margin: 0 20px 20px 0;
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background-color: #888888;
+    
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5;
+}
+
+.items:before{/*la pseudoclase before añade un contenido antes de cada elemento del html*/
+    content: "★";
+}
+
+.items:first-child{
+    font-weight: bold;
+}
+
 .img-diferenciales{
-    width: 50%;
+    width: 60%;
+    box-shadow: 3px 3px 5px 5px;
+}
+
+.img-diferenciales:hover{
+    opacity: 0.5;
+    transition: 400ms;
+}
+
+.video{
+    width: 560px;
+    margin: 1em auto;
+}
+
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+        width: auto;
+    }
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+    .lista-diferenciales, .img-diferenciales{
+        width: 100%;
+    }
 }

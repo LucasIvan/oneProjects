@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head><!--la eqiqueta head es para cargar información y configuración para el navegador no contenido-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css"> <!--css para eliminar el estilo automático de los navegadores-->
+        <link rel="stylesheet" href="style.css"> <!--css propio-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <title>Contacto - Barbería Alura</title>
+    </head>
+    <body>
+        <header> <!--Encabezado de la pág, no confundir con <head>, la etiqueta <header> es para el contenido-->
+            <div class="caja">
+                <h1><img src="img/logo.png" alt="Logo Barbería Alura" height="200px"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <form action="">
+                <label for="nombreapellido">Nombre y Apellido</label>
+                <input type="text" id="nombreapellido" class="input-padron" required>
+                <!--la propiedad required hace que el input sea obligatorio de rellenar-->
+                <label for="correoelectronico">Correo Electrónico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required required placeholder="email@dominio.com">
+                <!--la propiedad type ayuda a definir correctamente la experiencia de usuario y el formato de llenado del input-->
+                <label for="telefono">Teléfono</label>
+                <!--la propiedad placeholder da una muestra del formato que se busca que el usuario rellene-->
+                <input type="tel" id="telefono" class="input-padron" placeholder="(XXX) XXXX XXXX">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="60" rows="10" id="mensaje" class="input-padron"></textarea>
+
+                <fieldset><!--etiqueta para crear grupos de campos del formulario relacionados entre sí-->
+                    <!--la etiqueta leyend es la correcta para el título del grupo de campos-->
+                    <legend>¿Como le gustaría que lo contactemos?</legend>
+
+                    <!--al darle la prop name solo con el mismo valor permitirá seleccionar uno solo de los "radio"-->
+                    <label for="radio-email"><input type="radio" name="contacto" value="mail" id="radio-email">Email</label>
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>    
+                </fieldset>
+
+                <fieldset>
+                    <legend>¿En cual horario prefiere ser atendido?</legend>
+                    <select name="" id=""><!--selector desplegable, adentro de esta etiqueta se definen las opciones que contendrá-->
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox" checked>Le gustaría recivir novedades?</label>
+                <!--botón para enviar form-->
+                <input type="submit" value="Enviar Formulario" class="enviar">
+            </form>
+
+            <table><!--etiqueta de creación de tablas-->
+                <thead><!--encabezado de tablas-->
+                    <tr><!--Filas // creo que es inutilizable en el encabezado, no lo aclaran en los vídeos-->
+                        <th>Día</th><!--columnas del encabezado-->
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody><!--cuerpo de las tablas-->
+                    <tr><!--Filas-->
+                        <td>Lunes</td><!--columnas normales-->
+                        <td>08hs ~ 20hs</td>
+                    </tr>
+                    <tr>
+                        <td>Miercoles</td>
+                        <td>08hs ~ 20hs</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08hs ~ 20hs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer> <!--La etiqueta footer es para el contenido de pie de pág-->
+            <img src="img/logo-blanco.png" alt="Logo Barbería Alura" height="200px">
+            <p class="copyright">&copy Copyright Barbería Alura - 2023</p>
+        </footer>
+    </body>
+</html>
